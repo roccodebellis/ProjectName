@@ -17,4 +17,4 @@ fi
 
 # Run the 'make system_dependencies' command
 echo "⚙️  ${YELLOW}Running 'make system_dependencies'...${RESET}"
-make system_dependencies && echo "${GREEN}Dependencies installed successfully.${RESET}"
+make system_dependencies && echo "⚙️  ${GREEN}Dependencies installed successfully.${RESET}"
