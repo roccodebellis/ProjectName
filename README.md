@@ -1,8 +1,8 @@
-# Project Name
+# ProjectName
 
 ## Installation and Setup Guide
 
-Welcome to the **Project Name** project. This guide will provide you with the necessary instructions to install and set up the development environment for the project.
+Welcome to the **ProjectName** project. This guide will provide you with the necessary instructions to install and set up the development environment for the project.
 
 ### System Requirements
 
@@ -18,7 +18,7 @@ To install all project dependencies, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/user/project-name.git
+    git clone https://github.com/roccodebellis/ProjectName.git
     ```
 
 2. Navigate to the project directory:
@@ -33,6 +33,8 @@ To install all project dependencies, follow these steps:
     make system_dependencies
     ```
 
+> **Note:** Alternatively, you can run the provided installation script (see [Installation Script](#installation-script)).
+
 This command will install all dependencies listed in the Brewfile, including tools like Mise and Twist required for the project.
 
 ### Configuration
@@ -45,7 +47,12 @@ Once installation and configuration are complete, you're ready to run the projec
 
 ### Installation Script
 
-An installation script is available to automate the installation of project dependencies. Run the following command in your terminal:
+An installation script is available to automate the installation of project dependencies. Here are the available scripts:
+
+- `install_dependencies.zsh`: Automates the installation of project dependencies using the Makefile.
+
+
+To use the installation script, run the following command in your terminal:
 
 ```bash
 ./install_dependencies.zsh
