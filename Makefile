@@ -21,27 +21,23 @@ check_brew:
 		sleep 1; \
 	done
 
-check_node_version:
-	#@echo "🔧 Checking Node version..."
-	#@CURRENT_NODE_VERSION=$$(node -v | cut -d 'v' -f 2); \
-	#if [ "$$CURRENT_NODE_VERSION" != "$(SYSTEM_NODE_VERSION)" ]; then \
-	#	echo "🚨 A newer version of NodeJS is available."; \
-	#fi
-
 check_mise:
-	#@echo "🔧 Checking Mise..."
-	#@if test ! $$(which mise); then \
-	#	brew install mise; \
-	#fi
-	#@echo "🔧 Setting up Mise..."
-	#@mise use --local node@$(SYSTEM_NODE_VERSION)
-	#check_node_version
-
-check_twist:
-	@echo "🔧 Checking Twist..."
-	@if test ! $$(which twist); then \
-		brew install tuist; \
+	@echo "🔧 Checking Mise..."
+	@if test ! $$(which mise); then \
+		brew install mise; \
+		echo 'export PATH="$HOME/.local/share/mise/shims:$PATH"' >> ~/.zprofile; \
 	fi
+	@echo "🔧 Setting up Mise..."
+	@mise install
 
-system_dependencies: check_brew check_twist
+system_dependencies: check_brew check_mise
 	@echo "🔧 Setup system dependency completed."
+
+
+implode_mise:
+	@echo "🗑️ Removing Mise dependencies..."
+	mise uninstall tuist
+	mise uninstall node
+	mise implode
+	brew uninstall mise
+	@echo "🗑️ Mise dependencies removed."

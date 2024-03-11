@@ -1,0 +1,10 @@
+[settings]
+# configure `mise install` to always keep the downloaded archive
+
+[plugins]
+# specify a custom repo url
+# note this will only be used if the plugin does not already exist
+
+[tools]
+node = "20"
+tuist = "4.5.1" # https://github.com/tuist/tuist/releases
