@@ -1,5 +1,9 @@
 # ProjectName
 
+<div align="center">
+<a href="https://tuist.io"><img src="img.shields.io/badge/Powered%20by-Tuist-blue" alt="Tuist badge"></a>
+</div>
+
 ## Installation and Setup Guide
 
 Welcome to the **ProjectName** project. This guide will provide you with the necessary instructions to install and set up the development environment for the project.
