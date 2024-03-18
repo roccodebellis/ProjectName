@@ -7,4 +7,4 @@
 
 [tools]
 node = "20"
-tuist = "4.5.1" # https://github.com/tuist/tuist/releases
+tuist = "4.6.0" # https://github.com/tuist/tuist/releases
