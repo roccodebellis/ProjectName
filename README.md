@@ -1,5 +1,9 @@
 # ProjectName
 
+<div align="center">
+    <img src="https://img.shields.io/badge/Powered%20by-Tuist-blue" alt="Powered by Tuist">
+</div>
+
 ## Installation and Setup Guide
 
 Welcome to the **ProjectName** project. This guide will provide you with the necessary instructions to install and set up the development environment for the project.
@@ -36,6 +40,15 @@ To install all project dependencies, follow these steps:
 > **Note:** Alternatively, you can run the provided installation script (see [Installation Script](#installation-script)).
 
 This command will install all dependencies listed in the Brewfile, including tools like Mise and Twist required for the project.
+
+### Generating the Project with Tuist
+
+Once dependencies are installed, you can generate the project using Tuist.
+
+```bash
+make generate_project
+```
+This command will generate the project using the configurations defined in the Project.swift file with Tuist.
 
 ### Configuration
 
