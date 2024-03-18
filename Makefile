@@ -33,11 +33,14 @@ check_mise:
 system_dependencies: check_brew check_mise
 	@echo "🔧 Setup system dependency completed."
 
+generate_project:
+	@echo "🚀 Generating project with Tuist..."
+	@tuist generate
 
 implode_mise:
 	@echo "🗑️ Removing Mise dependencies..."
-	mise uninstall tuist
-	mise uninstall node
-	mise implode
+	@mise uninstall tuist --all
+	@mise uninstall node
+	@mise implode
 	brew uninstall mise
 	@echo "🗑️ Mise dependencies removed."
